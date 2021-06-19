@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+<name>m4w_robot</name>
+<version>1.0.0</version>
+<description>
+obstacle avoiding robot
+</description>
+<license>MIT</license>
+<author email="aws-robomaker@amazon.com">AWS RoboMaker</author>
+<maintainer email="aws-robomaker@amazon.com">AWS RoboMaker</maintainer>
+<buildtool_depend>catkin</buildtool_depend>
+<depend>rospy</depend>
+<depend>gazebo_ros</depend>
+<depend>gazebo_plugins</depend>
+<exec_depend>gazebo</exec_depend>
+</package>

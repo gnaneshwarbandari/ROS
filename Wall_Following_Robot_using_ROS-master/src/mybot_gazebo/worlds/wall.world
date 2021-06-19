@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Focus camera on tall pendulum -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+<model name="left">
+    <link name="link">
+      <pose>0 -9.5 0 0 0 0</pose>
+      <inertial>
+        <mass>50</mass>
+        <inertia>
+          <ixx>8.3333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1671</iyy>
+          <iyz>0</iyz>
+          <izz>1671</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>20 1 1</size>
+          </box>
+        </geometry>
+        <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>20 1 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+
+<model name="right">
+    <link name="link">
+      <pose>0 9.5 0 0 0 0</pose>
+      <inertial>
+        <mass>50</mass>
+        <inertia>
+          <ixx>8.3333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1671</iyy>
+          <iyz>0</iyz>
+          <izz>1671</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>20 1 1</size>
+          </box>
+        </geometry>
+        <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>20 1 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+<model name="east">
+    <link name="link">
+      <pose>-9.5 0 0 0 0 0</pose>
+      <inertial>
+        <mass>50</mass>
+        <inertia>
+          <ixx>1354.2</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>8.3333</iyy>
+          <iyz>0</iyz>
+          <izz>1354.2</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 18 1</size>
+          </box>
+        </geometry>
+        <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 18 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+<model name="west">
+    <link name="link">
+      <pose>9.5 0 0 0 0 0</pose>
+      <inertial>
+        <mass>50</mass>
+        <inertia>
+          <ixx>1354.2</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>8.333</iyy>
+          <iyz>0</iyz>
+          <izz>1354.2</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 18 1</size>
+          </box>
+        </geometry>
+        <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 18 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+
+  </world>
+</sdf>

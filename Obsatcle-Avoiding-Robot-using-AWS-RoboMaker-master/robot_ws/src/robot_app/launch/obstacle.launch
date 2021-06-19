@@ -1,0 +1,13 @@
+<launch>
+<!--
+Using simulation time means nodes initialized after this
+will not use the system clock for its ROS clock and
+instead wait for simulation ticks.
+See http://wiki.ros.org/Clock
+Note: set to false for deploying to a real robot.
+-->
+<arg name="use_sim_time" default="true"/>
+<param name="use_sim_time" value="$(arg use_sim_time)"/>
+<!-- robot will start by avoiding obstacles -->
+<node pkg="robot_app" type="obstacle.py" name="obstacle" output="screen"/>
+</launch>
